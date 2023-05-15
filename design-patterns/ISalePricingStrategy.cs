@@ -2,5 +2,5 @@
 
 public interface ISalePricingStrategy
 {
-
+    decimal GetTotal(Sale sale);
 }

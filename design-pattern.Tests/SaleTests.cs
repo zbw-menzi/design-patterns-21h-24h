@@ -10,7 +10,8 @@ namespace design_pattern.Tests
         public void GetTotal_WhenPercentageDiscountOf10_ThenReturn90()
         {
             // Arrange
-            var sale = new Sale(null, 100m);
+            var strategy = new PercentagePricingStrategy(10m);
+            var sale = new Sale(strategy, 100m);
 
             // Act + Assert
             sale.GetTotal().Should().Be(90);

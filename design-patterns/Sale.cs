@@ -3,13 +3,15 @@
 public class Sale
 {
     private readonly ISalePricingStrategy _pricingStrategy;
-    private readonly decimal _amount;
 
     public Sale(ISalePricingStrategy pricingStrategy, decimal amount)
     {
         _pricingStrategy = pricingStrategy;
-        _amount = amount;
+
+        Amount = amount;
     }
+
+    internal decimal Amount { get; }
 
     public decimal GetTotal()
     {
