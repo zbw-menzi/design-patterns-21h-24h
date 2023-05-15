@@ -1,4 +1,4 @@
-﻿namespace design_patterns;
+﻿namespace design_patterns.Strategy;
 
 public interface ISalePricingStrategy
 {

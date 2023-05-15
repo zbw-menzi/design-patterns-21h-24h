@@ -1,4 +1,4 @@
-﻿namespace design_patterns;
+﻿namespace design_patterns.Strategy;
 
 internal class PercentagePricingStrategy : ISalePricingStrategy
 {
@@ -11,6 +11,6 @@ internal class PercentagePricingStrategy : ISalePricingStrategy
 
     public decimal GetTotal(Sale sale)
     {
-        return sale.Amount - (sale.Amount * (_percentage / 100m));
+        return sale.Amount - sale.Amount * (_percentage / 100m);
     }
 }
