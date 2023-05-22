@@ -1,4 +1,4 @@
-﻿namespace design_patterns.Strategy
+﻿namespace Zbw.DesignPatterns.Strategy
 {
     using System;
     using System.Collections.Generic;
@@ -6,8 +6,13 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    internal class DateTimeProvider : IDateTimeProvider
+    internal class TimeSource : ITimeSource
     {
         public DateTime Now => DateTime.Now;
     }
+
+    // Other things to mock:
+    // - Environment
+    // - FileSystem
+    // - Network
 }
