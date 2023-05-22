@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using ZbW.DesignPatterns.Singleton.Threads;
-
-namespace ZbW.DesignPatterns.Singleton
+﻿namespace ZbW.DesignPatterns.Singleton
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using ZbW.DesignPatterns.Singleton.Threads;
+
     public class Program
     {
         public static void Main(string[] args)

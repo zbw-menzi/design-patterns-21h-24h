@@ -15,6 +15,7 @@
 
         public void Add(IPricingStrategy pricingStrategy)
         {
+
             _pricingStrategies.Add(pricingStrategy);
         }
 
