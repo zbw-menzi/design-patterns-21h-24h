@@ -9,55 +9,58 @@ namespace Zbw.DesignPatterns.Tests.State
     public class StatePatternTests
     {
         [Fact]
-        public void ProcessTwintPaymentState()
+        public void CreateOrder()
         {
             // arrange
-            var sut = new PoS(new TwintPaymentState());
+            var sut = new PoS();
 
             // act
-            var result = sut.ProcessPayment(23);
+            sut.CreateOrder(1, 230);
 
             // assert
-            result.Should().Be("Twintzahlung in Höhe von 23 erfolgreich");
+            sut.Order.State.Should().BeOfType(typeof(UnpaidOrderState));
         }
 
         [Fact]
-        public void ProcessCashPaymentState()
+        public void ProcessOrder()
         {
             // arrange
-            var sut = new PoS(new CashPaymentState());
+            var sut = new PoS();
 
             // act
-            var result = sut.ProcessPayment(23);
+            sut.CreateOrder(1, 230);
+            sut.Process();
 
             // assert
-            result.Should().Be("Barzahlung in Höhe von 23 erfolgreich");
+            sut.Order.State.Should().BeOfType(typeof(ProcessOrderState));
         }
 
         [Fact]
-        public void CancelTwintPaymentState()
+        public void CancelOrder()
         {
             // arrange
-            var sut = new PoS(new TwintPaymentState());
+            var sut = new PoS();
 
             // act
-            var result = sut.CancelPayment();
+            sut.CreateOrder(1, 230);
+            sut.Cancel();
 
             // assert
-            result.Should().Be("Twintzahlung abgebrochen");
+            sut.Order.State.Should().BeOfType(typeof(CancelOrderState));
         }
 
         [Fact]
-        public void CancelCashPaymentState()
+        public void ShipOrder()
         {
             // arrange
-            var sut = new PoS(new CashPaymentState());
+            var sut = new PoS();
 
             // act
-            var result = sut.CancelPayment();
+            sut.CreateOrder(1, 230);
+            sut.Ship();
 
             // assert
-            result.Should().Be("Barzahlung abgebrochen");
+            sut.Order.State.Should().BeOfType(typeof(ShipOrderState));
         }
     }
 }

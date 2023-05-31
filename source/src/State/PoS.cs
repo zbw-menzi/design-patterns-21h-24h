@@ -2,21 +2,26 @@
 {
     internal class PoS
     {
-        private IPaymentState _state;
+        public Order Order { get; set; }
 
-        public PoS(IPaymentState state)
+        public void CreateOrder(int id, decimal amount)
         {
-            _state = state;
+            Order = new Order(id, amount);
         }
 
-        public string ProcessPayment(decimal amount)
+        public void Process()
         {
-            return _state.Pay(amount);
+            Order.ChangeState("process");
         }
 
-        public string CancelPayment()
+        public void Cancel()
         {
-            return _state.Cancel();
+            Order.ChangeState("cancel");
+        }
+
+        public void Ship()
+        {
+            Order.ChangeState("ship");
         }
     }
 }
