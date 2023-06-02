@@ -25,6 +25,10 @@ Mit ICloneable
 
 ```mermaid
 classDiagram
+    class ICloneable{
+        
+    }
+    <<interface>> ICloneable
     class BasicCustomerPrototype{
         +String FirstName
         +String Lastname
