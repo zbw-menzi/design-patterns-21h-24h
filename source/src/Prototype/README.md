@@ -29,6 +29,7 @@ classDiagram
         
     }
     <<interface>> ICloneable
+    ICloneable <|-- BasicCustomerPrototype
     class BasicCustomerPrototype{
         +String FirstName
         +String Lastname
