@@ -40,7 +40,8 @@ classDiagram
     BasicCustomerPrototype: +DeepClone()
     BasicCustomerPrototype <|-- Customer
     class Customer{
-        +clone()
+        +Clone()
+        +DeepClone()
     }
     Customer <|-- Address
     class Address{
