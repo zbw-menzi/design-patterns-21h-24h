@@ -2,11 +2,11 @@
 
 namespace Prototype
 {
-    public class Customer : BasicCustomer
+    public class Customer : BasicCustomerPrototype
     {
         public override object Clone()
         {
-            return this.MemberwiseClone() as BasicCustomer;
+            return this.MemberwiseClone() as BasicCustomerPrototype;
         }
         public override Customer DeepClone()
         {

@@ -11,7 +11,7 @@ classDiagram
     <<interface>> Prototype
     Prototype: +clone()
     Prototype <|-- ConcretePrototype1
-    Prototyp <|-- ConcretePrototype2
+    Prototype <|-- ConcretePrototype2
     class ConcretePrototype1{
       +clone()
     }
@@ -25,18 +25,25 @@ Mit ICloneable
 
 ```mermaid
 classDiagram
-    class BasisCustomer{
-        +FirstName
-        +Lastname
+    class BasicCustomerPrototype : ICloneable{
+        +String FirstName
+        +String Lastname
+        +Address HomeAddress
+        +Address BillingAddress
     }
-    BasisCustomer: 
-    BasisCustomer: +Clone()
-    BasisCustomer: +DeepClone()
-    BasisCustomer <|-- Customer
-    class Customer
+    BasicCustomerPrototype: +Clone()
+    BasicCustomerPrototype: +DeepClone()
+    BasicCustomerPrototype <|-- Customer
+    class Customer{
+        +clone()
+    }
     Customer <|-- Address
     class Address{
-      +clone()
+      +String StreetAddress
+      +String City
+      +String State
+      +String Country
+      +String PostCode
     }
 ```
 
