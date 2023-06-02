@@ -8,6 +8,7 @@
 
     using Zbw.DesignPatterns.Adapter;
 
+
     public class EmployeeManagerTests
     {
         [Fact]
