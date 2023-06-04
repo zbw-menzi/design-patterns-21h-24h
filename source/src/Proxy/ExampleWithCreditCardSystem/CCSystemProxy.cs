@@ -6,33 +6,28 @@ using System.Threading.Tasks;
 
 namespace Zbw.DesignPatterns.Proxy.ExampleWithCreditCardSystem
 {
-    internal class CCSystemProxy : Transaction
+    public class CCSystemProxy : Transaction
     {
         private CreditCardSystem system;
 
-        CCSystemProxy(CreditCardSystem system)
+        public CCSystemProxy(CreditCardSystem system)
         {
             this.system = system;
         }
 
         public override float BookMoneyFromAccount(float amount)
         {
-            if (system.Account.Money > amount)
-                {
+            if (system.Account.Money > amount) {
                     return system.BookMoneyFromAccount(amount);
-                }
-                else
-                {
+            } else {
                     throw new ArgumentException("Your Cash Amount is below the" +
                                                 " wanted amount to draw from your account");
                 }
-
-            return system.Account.Money;
         }
 
         public override float AddMoneyToAccount(float amount)
         {
-            throw new NotImplementedException();
+            return this.system.Account.IncreaseMoney(amount);
         }
 
         public override float GetMoneyAmount()

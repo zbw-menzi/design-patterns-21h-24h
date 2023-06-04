@@ -1,22 +1,18 @@
 ﻿namespace Zbw.DesignPatterns.Proxy.ExampleWithCreditCardSystem;
 
-internal class Account
+public class Account
 {
     private float money { get; set; }
-
-    private bool IsAccountBlocked { get;}
 
     public float Money
     {
         get => money;
-        set => money -= value;
+        set => money = value;
     }
 
-
-    public Account(float money, bool isAccountBlocked)
+    public Account(float money)
     {
         this.Money = money;
-        this.IsAccountBlocked = isAccountBlocked;
     }
 
     public float IncreaseMoney(float money)
@@ -26,6 +22,6 @@ internal class Account
 
     public float DecreaseMoney(float money)
     {
-        return this.Money -= money;
+        return this.Money = this.Money - money;
     }
 }

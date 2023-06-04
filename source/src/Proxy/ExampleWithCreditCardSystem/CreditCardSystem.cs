@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Zbw.DesignPatterns.Proxy.ExampleWithCreditCardSystem
 {
-    internal class CreditCardSystem : Transaction
+    public class CreditCardSystem : Transaction
     {
         private Account acc;
         public Account Account => acc;
