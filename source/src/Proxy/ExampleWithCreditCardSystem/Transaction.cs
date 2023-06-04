@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Zbw.DesignPatterns.Proxy.ExampleWithCreditCardSystem
 {
-    internal class CreditCardSystem
+    public abstract class Transaction
     {
+        public abstract float BookMoneyFromAccount(float amount);
+
+        public abstract float AddMoneyToAccount(float amount);
+
+        public abstract float GetMoneyAmount();
     }
 }
