@@ -1,0 +1,4 @@
+Ausgangslage:
+4 Stores, welche Produkte verkaufen müssen die Lagerstände aktualisieren, sobald ein Produkt verkauft wurde.
+Damit die Store's untereinander keine Abhängigkeiten besitzen kommt die Mediator Klasse ins Spiel.
+Die Stores kennen nur den Mediator und geben diesem ein update sobald ein Produkt verkauft wurde.
