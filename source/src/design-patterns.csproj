@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+	<InternalsVisibleTo Include="design-patterns.tests"/>
   </ItemGroup>
 
 	<ItemGroup>

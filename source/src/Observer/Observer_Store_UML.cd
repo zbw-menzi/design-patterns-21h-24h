@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Zbw.DesignPatterns.Observer.Store">
+    <Position X="3.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAIAAIAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer\Store.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="observers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Zbw.DesignPatterns.Observer.ProductStore">
+    <Position X="3.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAAAAAIAAgAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Observer\ProductStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zbw.DesignPatterns.Observer.ProductDisplay">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Observer\ProductDisplay.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Zbw.DesignPatterns.Observer.IStore">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAIAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer\IStore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Zbw.DesignPatterns.Observer.IObserver">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer\IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
