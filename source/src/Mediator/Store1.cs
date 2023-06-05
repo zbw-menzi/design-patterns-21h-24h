@@ -9,6 +9,8 @@ namespace Zbw.DesignPatterns.Mediator
     public class Store1
     {
         private readonly IMediator _mediator;
+        public bool StorageUpdated { get; private set; }
+
         public Store1(IMediator mediator)
         {
             _mediator = mediator;
@@ -24,6 +26,7 @@ namespace Zbw.DesignPatterns.Mediator
         public void UpdateStorage()
         {
             // Update Storage
+            StorageUpdated = true;
         }
     }
 }

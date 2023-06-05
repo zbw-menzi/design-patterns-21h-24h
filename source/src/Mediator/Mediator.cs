@@ -2,36 +2,44 @@
 {
     public class Mediator : IMediator
     {
-        private Store1 store1;
-        private Store2 store2;
-        private Store3 store3;
-        private Store4 store4;
+        public Store1 Store1 { get; set; }
+        public Store2 Store2 { get; set; }
+        public Store3 Store3 { get; set; }
+        public Store4 Store4 { get; set; }
+
+        public Mediator()
+        {
+            Store1 = new Store1(this);
+            Store2 = new Store2(this);
+            Store3 = new Store3(this);
+            Store4 = new Store4(this);
+        }
 
         public void Notify(object sender)
         {
-            if (sender.GetType() == store1.GetType())
+            if (sender.GetType() == Store1.GetType())
             {
-                store2.UpdateStorage();
-                store3.UpdateStorage();
-                store4.UpdateStorage();
+                Store2.UpdateStorage();
+                Store3.UpdateStorage();
+                Store4.UpdateStorage();
             }
-            else if (sender.GetType() == store2.GetType())
+            else if (sender.GetType() == Store2.GetType())
             {
-                store1.UpdateStorage();
-                store3.UpdateStorage();
-                store4.UpdateStorage();
+                Store1.UpdateStorage();
+                Store3.UpdateStorage();
+                Store4.UpdateStorage();
             }
-            else if (sender.GetType() == store3.GetType())
+            else if (sender.GetType() == Store3.GetType())
             {
-                store1.UpdateStorage();
-                store2.UpdateStorage();
-                store4.UpdateStorage();
+                Store1.UpdateStorage();
+                Store2.UpdateStorage();
+                Store4.UpdateStorage();
             }
-            else if (sender.GetType() == store4.GetType())
+            else if (sender.GetType() == Store4.GetType())
             {
-                store1.UpdateStorage();
-                store2.UpdateStorage();
-                store3.UpdateStorage();
+                Store1.UpdateStorage();
+                Store2.UpdateStorage();
+                Store3.UpdateStorage();
             }
             else
             {
