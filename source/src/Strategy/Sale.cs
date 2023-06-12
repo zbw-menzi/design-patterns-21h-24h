@@ -10,6 +10,7 @@
     {
         private readonly IPricingStrategy _pricingStrategy;
         private readonly decimal _amount;
+        public bool IsApproved { get; private set; }
 
         public Sale(IPricingStrategy pricingStrategy, decimal amount)
         {
@@ -24,6 +25,11 @@
         public decimal GetTotal()
         {
             return _pricingStrategy.GetTotal(this);
+        }
+
+        public void Approve()
+        {
+            this.IsApproved = true;
         }
     }
 }
