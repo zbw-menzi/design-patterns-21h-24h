@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <RootNamespace>Zbw.DesignPatterns</RootNamespace>
@@ -14,5 +13,4 @@
         <InternalsVisibleTo Include="design-patterns.tests" />
         <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
     </ItemGroup>
-
 </Project>
