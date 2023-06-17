@@ -11,4 +11,8 @@
 	<InternalsVisibleTo Include="design-patterns.tests"/>
   </ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="design-patterns.tests" />
+	</ItemGroup>
+
 </Project>
