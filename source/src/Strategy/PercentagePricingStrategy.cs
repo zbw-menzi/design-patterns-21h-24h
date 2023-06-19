@@ -11,7 +11,8 @@
 
         public decimal GetTotal(Sale sale)
         {
-            return sale.Amount - sale.Amount / 100m * _percentage;
+            return sale.Amount - (sale.Amount / 100m * _percentage);
+            
         }
     }
 }
